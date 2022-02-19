@@ -53,18 +53,18 @@ $(document).ready(function(){
 
 
 
-    function myTimer(){
-      if( Flow == 0 && Led1Status == '1')
-      {
-          setTimeout(function(){
-            if( Flow == 0 && Led1Status == '1')
-            {
-              firebaseRef.set("0");
-            }
-          }, 10000);
-      }
-    }
-    setInterval(function () {myTimer();}, 10000);
+//     function myTimer(){
+//       if( Flow == 0 && Led1Status == '1')
+//       {
+//           setTimeout(function(){
+//             if( Flow == 0 && Led1Status == '1')
+//             {
+//               firebaseRef.set("0");
+//             }
+//           }, 10000);
+//       }
+//     }
+//     setInterval(function () {myTimer();}, 10000);
 
     $(".toggle-btn").click(function(){
 
