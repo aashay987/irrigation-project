@@ -39,10 +39,12 @@ $(document).ready(function(){
 			//$(".Light1Status").text("The light is off");
 			document.getElementById("unact").style.display = "none";
 			document.getElementById("act").style.display = "block";
+			document.getElementById("Uvalu").innerHTML = Flow;
 		} else {
 			//$(".Light1Status").text("The light is on");
 			document.getElementById("unact").style.display = "block";
 			document.getElementById("act").style.display = "none";
+			document.getElementById("Uvalu").innerHTML = 0;
 		}
     // Update flow in HTML
     document.getElementById("fvalu").innerHTML = Usage;
