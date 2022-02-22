@@ -63,10 +63,10 @@ $(document).ready(function(){
             {
               firebaseRef.set("0");
             }
-          }, 40000);
+          }, 10000);
       }
     }
-    setInterval(function () {myTimer();}, 30000);
+    setInterval(function () {myTimer();}, 10000);
 
     $(".toggle-btn").click(function(){
 
