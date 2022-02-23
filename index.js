@@ -21,7 +21,7 @@ $(document).ready(function(){
   var Led1Status;
   var Flow;
   var Usage;
-
+  var flag = 0;	
 	database.ref().on("value", function(snap){
 		Led1Status = snap.val().Led1Status;
     Flow = snap.val().Flow;
@@ -56,18 +56,18 @@ $(document).ready(function(){
 
 
     function myTimer(){
-      if( Flow < 0.5 && Led1Status == '1')
+      if( Flow < 0.5 && Led1Status == '1' && flag)
       {
-          setTimeout(function(){
-            if( Flow < 0.5 && Led1Status == '1')
-            {
-              firebaseRef.set("0");
-            }
-          }, 5000);
-	  alert('Water level low, fill water');    
+         firebaseRef.set("0");
+	 alert('Water level low, fill water');
+	 flag = 0;     
       }
+      else if(Flow < 0.5 && Led1Status == '1' && !flag)
+      {
+	flag = 1;
+      }	      
     }
-    setInterval(function () {myTimer();}, 10000);
+    setInterval(myTimer, 5000);
 
     $(".toggle-btn").click(function(){
 
