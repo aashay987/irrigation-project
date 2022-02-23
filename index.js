@@ -60,7 +60,7 @@ $(document).ready(function(){
       if( Flow < 0.5 && Led1Status == '1' && flag)
       {
          firebaseRef.set("0");
-	 alert('Water level low, fill water');
+	 alert('Water level low!!! fill water');
 	 flag = 0;     
       }
       else if(Flow < 0.5 && Led1Status == '1' && !flag)
