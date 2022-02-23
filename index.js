@@ -56,7 +56,7 @@ $(document).ready(function(){
 
 
     function myTimer(){
-     alert(Flow);	    
+	    
       if( Flow < 0.5 && Led1Status == '1' && flag)
       {
          firebaseRef.set("0");
