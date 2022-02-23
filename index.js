@@ -56,14 +56,15 @@ $(document).ready(function(){
 
 
     function myTimer(){
-      if( Flow < 0.1 && Led1Status == '1')
+      if( Flow < 0.5 && Led1Status == '1')
       {
           setTimeout(function(){
-            if( Flow < 0.1 && Led1Status == '1')
+            if( Flow < 0.5 && Led1Status == '1')
             {
               firebaseRef.set("0");
             }
-          }, 10000);
+          }, 5000);
+	  alert('Water level low, fill water');    
       }
     }
     setInterval(function () {myTimer();}, 10000);
